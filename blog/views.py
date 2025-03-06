@@ -4,8 +4,7 @@ from .models import Post
 # Create your views here.
 
 
-all_posts = [
-]
+all_posts = []
 
 def get_date(post):
     return post['date'] # get the date of the post
