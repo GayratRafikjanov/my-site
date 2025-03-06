@@ -16,7 +16,7 @@ class Post(models.Model):
     excerpt = models.CharField(max_length=200)
     image_name = models.CharField(max_length=100)
     date = models.DateField(auto_now=True)
-    slug = models.Slugfield(unique=True, db_index=True)
+    slug = models.SlugField(unique=True, db_index=True)
     content = models.TextField(validators=[MinLengthValidator(10)])
     # related name is used to access the posts of an author
     # on_delete=models.SET_NULL means that if the author is deleted, the post will still exist but the author will be null 
