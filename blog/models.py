@@ -18,7 +18,7 @@ class Post(models.Model):
     date = models.DateField(auto_now=True)
     slug = models.Slugfield(unique=True, db_index=True)
     content = models.TextField(validators=[MinLengthValidator(10)])
-        # related name is used to access the posts of an author
+    # related name is used to access the posts of an author
     # on_delete=models.SET_NULL means that if the author is deleted, the post will still exist but the author will be null 
     # null=True means that the author can be null
     # db_index=True means that the slug will be indexed in the database for faster lookup
